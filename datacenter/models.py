@@ -31,12 +31,11 @@ class Visit(models.Model):
             )
         )
 
-def get_duration(visit, leave=timezone.localtime()):
+def get_duration(visit, leave=None):
+    if leave == None:
+        leave = timezone.localtime()
     duration = leave - timezone.localtime(visit)
     return duration
 
 def is_visit_long(visit, minutes=60):
-    if visit.seconds > minutes*60:
-        return True
-    else:
-        return False
+    return visit.seconds > minutes*60
