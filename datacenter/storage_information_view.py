@@ -10,7 +10,8 @@ def storage_information_view(request):
         non_closed_visits.append({
             'who_entered': visiter.passcard,
             'entered_at': visiter.entered_at,
-            'duration': get_duration(visiter.entered_at)
+            'duration': get_duration(visiter.entered_at),
+            'is_strange': is_visit_long(get_duration(visiter.entered_at,visiter.leaved_at))
         })
     context = {
         'non_closed_visits': non_closed_visits,

@@ -32,7 +32,7 @@ class Visit(models.Model):
         )
 
 def get_duration(visit, leave=None):
-    if leave == None:
+    if not leave:
         leave = timezone.localtime()
     duration = leave - timezone.localtime(visit)
     return duration
