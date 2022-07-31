@@ -9,6 +9,21 @@
 ## Как установить
 Скачайте репозиторий, создайте виртуальное окружение и после активации виртуального окружения установите зависимости из файла `poetry.lock`.
 
+## Примеры запуска скрипта
+Запустите локальный сервер с проектом:
+```
+(name_of_env) % python manage.py runserver 0.0.0.0:8000
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 31, 2022 - 15:55:16
+Django version 3.2, using settings 'project.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+```
+Откройте в браузере ссылку http://0.0.0.0:8000/
+
 ## Функционал
 `/` - На главной странице выводится список всех посетителей.
 Для управления отображения данных на странице используйте файлы:
