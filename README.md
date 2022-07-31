@@ -9,6 +9,19 @@
 ## Как установить
 Скачайте репозиторий, создайте виртуальное окружение и после активации виртуального окружения установите зависимости из файла `poetry.lock`.
 
+## Инструкция по настройке окружения
+Создайте файл `.env` со следующими переменными:
+```
+DB_HOST=(database hostname)
+DB_PORT=(database port)
+DB_NAME=(database name)
+DB_USER=(database username)
+DB_PASSWORD=(database password)
+DEBUG=(true or false)
+ALLOWED_HOSTS=(list of allowed hosts)
+SECRET_KEY=(secret key of django)
+```
+
 ## Примеры запуска скрипта
 Запустите локальный сервер с проектом:
 ```
